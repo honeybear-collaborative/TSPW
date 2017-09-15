@@ -3,9 +3,11 @@ body {
     font-family:  sans-serif;
     margin: 1em 1.2em 1em 1.2em;
     max-width: 900px;
+    background: floralwhite;
 }
 
 h1 {
+    border-bottom: 2px solid silver;
     line-height: 1em;
     font-size:x-large;
     margin-bottom: .31em;
@@ -30,7 +32,6 @@ a:visited{
   background: #f0f0f0;
   padding: .1em;
   margin-bottom:2em;
-  font-size: .8em;
 }
 
 #profile_pic {

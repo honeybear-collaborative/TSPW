@@ -1,4 +1,4 @@
-STRING1 = "Last updated on "
+STRING1 = "Last updated by [Don Blair]\(https://twitter.com/donwblair\) on"
 STRING2 = "Created using [TSPW]\(https://github.com/eakbas/TSPW\) and [pandoc]\(http://pandoc.org/\)."
 
 
