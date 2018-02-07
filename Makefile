@@ -4,6 +4,7 @@ STRING2 = "Created using [TSPW]\(https://github.com/eakbas/TSPW\) and [pandoc]\(
 
 RESOURCEDIR = "resources"
 TARGETDIR = "build"
+ONLINEDIR = "/home/dwblair/gitwork/dwblair.github.io"
 
 
 SOURCES = $(wildcard *.md)
@@ -23,6 +24,7 @@ build/%.html: %.md
 	echo "\n\\ \n\n\\ \n\n***\n\n<span class="footer">*$(STRING1) `stat -c %Y Makefile  | date +'%b %d, %Y'`. $(STRING2)*</span>" >> $(TEMPFILE)
 	pandoc --mathjax -t html5 -s -c $(RESOURCEDIR)/style.css $(TEMPFILE) -o $@
 	rm -f $(TEMPFILE)
+	cp -r $(TARGETDIR)/* $(ONLINEDIR)
 
 clean: 
 	rm -rf $(TARGETDIR)
