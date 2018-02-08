@@ -1,42 +1,74 @@
-# TSPW: The Simple Pandoc-based Website
 
-This is a static website generator based on a very simple template and
-[pandoc](http://pandoc.org). It allows you write the content of your website
-using (almost) plain text -- more correctly said, using pandoc's markdown syntax
--- and generates a static HTML5-valid website which can be deployed on a
-webserver. I used TSPW to create my own
-[website](http://www.ceng.metu.edu.tr/~emre/). 
+# Notes 
+<!--<img src="resources/profile_pic.png" id="profile_pic"/>-->
 
-## How to use 
+## Overview
 
-To use TSPW, follow these steps: 
+FIOT is focused on 
 
-1. Make sure you have [pandoc](http://pandoc.org) installed. 
-1. Download/clone the repository (i.e. `git clone
-https://github.com/eakbas/TSPW.git`),  
-2. Create the content of your website by editing the markdown (`*.md`) files, 
-3. Run `make`.
-4. A `build/` directory will be created automatically for you. You can deploy
-(i.e. copy) the contents of this directory to your webserver, typically under
-`public_html/` in your home directory.
+- **Collaboration tech**. 
 
-If you skip the second step above, then you will get [this dummy
-website](http://www.ceng.metu.edu.tr/~emre/TSPW). 
+- **Farm Resource Management**. FarmOS. Electric fence and water monitoring. Greenhouse monitoring. Plant health. 
 
-## Why create yet another static-site-generator?
+- **Wireless communications**.
 
-There are many static site generators, e.g.  [Jekyll](https://jekyllrb.com/),
-[Hakyll](http://jaspervdj.be/hakyll/), [pelican](http://blog.getpelican.com/)
-and more. And all of them are great, much more capable than TSPW. However, they
-are primarily intended for creating blog websites, and therefore, complicated to setup
-and use for a simple personal academic website. For this reason, I wrote this
-simple generator. 
+- **Farming automation and robotics**.
 
-Why not directly write HTML code? Simply because [markdown
-syntax](https://daringfireball.net/projects/markdown/syntax) beats HTML syntax
-and thanks to powerful markdown compilers such as [pandoc](http://pandoc.org), it is
-possible to generate full websites from markdown files. It is much easier to
-create content using markdown than using HTML. 
+- **Power storage and generation**.
 
-Please [drop me a message](http://www.ceng.metu.edu.tr/~emre/) if you find TSPW
-useful and/or you use it in any way.
+
+## Collaboration tech [chat, VOIP, forums] 
+
+- **Riot and Matrix**. For daily communications among collaborators, we've been using [Riot.im](http://riot.im), which is a slick client (on smartphones, in browsers, and with desktop clients) for the [Matrix](http://matrix.org) protocol.  Matrix is intended to be a decentralized chat and VOIP protocol -- decentralized in the sense that Matrix server software is open source, can be run independently (even on a single-board computer like a Raspberry Pi), and can be federated.  It is also intended to be a 'bridging' protocol:  multiple other messaging protocols are currently supported (e.g. Slack, IRC) and interfaced by a Matrix server. Conversations and threads are organized within 'rooms'; VOIP seems to be stable, even in relatively low-bandwidth networking conditions (comparing favorably with Skype and Google Hangouts); and there is the ability to manage 'integrations' such as attatching an Etherpad (collaborative document editing) to a 'room'.
+
+- **Discourse**.
+
+## Farm information management
+
+- **FarmOS**.
+
+## Wireless communications
+
+- **Low-power, long-range radio**. For larger farms, or for off-grid monitoring applications, it may be convenient to use radio technologies that are lower-power than 'wifi'.  One relatively new technology in this category is '[LoRa](https://www.digikey.com/en/articles/techzone/2016/nov/lorawan-part-1-15-km-wireless-10-year-battery-life-iot)', a proprietary IOT radio protocol and associated hardware stack that enables longer ranges than wifi:  LoRa can achieve 1000s of meters, line of sight, while WiFi typically only offers 10's of meters.  The tradeoff is that LoRa is capable of far lower bandwidth than WiFi, isn't (easily) capable of meshing as wifi is, and doesn't 'speak' TCP/IP.  LoRa is appropriate for low-bandwidth communications (like a short text message, or a sensor reading), and can achieve very low power consumption in intermittent broadcast scenarios (periodic messages or sensor readings, separated by several minutes). We recently achieved an approximate 1 kilometer range between two LoRa radio modules, using simple prototyping-wire antennae, in an urban environment.
+
+<a href="resources/lora_test.png"><img src="resources/lora_test.png" width=300></a>
+
+- **Wifi mesh**. The ability to 'mesh' wifi routers -- that is, to set up routers with overlapping effective range areas that allow for information to 'hop' across these routers over distances longer than any individual router's range -- is useful for 'higher-bandwidth' applications in a farm communications or sensing context:  VOIP, chat, video and image capture, and locally-centralized sensor datalogging servers.  We will be experimenting with routers and protocols designed to make mesh networking easier -- in particular, [Ubiquity](https://www.ubnt.com/products/#default) routers, used in the manner that groups like [NYCMesh](https://nycmesh.net) have deployed them. 
+
+<a href="resources/ubiquity.png"><img src="resources/ubiquity.png" width=300></a>
+
+## Farm automation / robotics
+
+- **Blockly and Scratch**.  [Blockly](https://developers.google.com/blockly/) and [Scratch](https://scratch.mit.edu/) are both graphical programming interfaces that enable automation and measurement processes to be designed using graphical, interactive 'code blocks' that provide standard declarative programming structures (declaring and manipulating variables, for loops, etc).  We are experimenting with using this style of interface to the design of custom, automated processes on the farm (controlling HVAC, pumps, sensors and actuators) easy to accomplish.
+
+<a href="resources/blockly.png"><img src="resources/blockly.png" width=300></a>
+
+- **Grove Pi**.  The 'Grove' 
+
+- **ROS**.
+
+## Instrumentation / sensors.
+
+- **Water level**.
+
+- **Conductivity**.
+
+- **Electric fence monitoring.**
+
+## Power generation and storage
+
+- **Solar**.
+
+- **Wind**.
+
+- **Water**.
+
+
+
+
+
+<!--
+**[Blockchain 001](blockchain1.html)**. Thoughts on how and whether the blockchain enhances autonomy and solidarity.  
+
+#**[Blockchain 002](blockchain1.html)**. How to use the blockchain in particular applications. 
+-->
