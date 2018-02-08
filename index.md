@@ -1,6 +1,3 @@
----
-pagetitle: notes 
-...
 
 # Notes 
 <!--<img src="resources/profile_pic.png" id="profile_pic"/>-->
